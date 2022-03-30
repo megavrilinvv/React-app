@@ -5,11 +5,15 @@ import { Header } from "./Components/Header";
 import { UsersName } from "./Components/UsersName";
 import { UsersPosts } from "./Components/UsersPosts";
 import { PostComments } from "./Components/PostComments";
+import { Photo } from "./Components/Photo";
 
 function App() {
   const [users, setUsers] = useState([]);
   const [posts, setPosts] = useState([]);
   const [postComments, setPostComments] = useState([]);
+
+  const [alboms, setAlboms] = useState([]);
+  const [photos, setPhotos] = useState([]);
 
   const fetchUsers = () => {
     fetch("https://jsonplaceholder.typicode.com/users")
@@ -29,6 +33,18 @@ function App() {
       .then((data) => setPostComments(data));
   };
 
+  const getPhotos = (albomId) => {
+    fetch(`https://jsonplaceholder.typicode.com/photos?albumId=${albomId}`)
+      .then((result) => result.json())
+      .then((data) => setPhotos(data));
+  };
+
+  const getAlboms = (userId) => {
+    fetch(`https://jsonplaceholder.typicode.com/albums?userId=${userId}`)
+      .then((result) => result.json())
+      .then((data) => setAlboms(data));
+  };
+
   const style = {
     width: "100%",
     maxWidth: 360,
@@ -43,7 +59,6 @@ function App() {
         <UsersPosts posts={posts} takeComments={takeComments} />
         <PostComments postComments={postComments} />
       </div>
-      <button onClick={"https://mui.com/components/trap-focus"}></button>
     </div>
   );
 }
