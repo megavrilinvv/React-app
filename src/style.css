@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 15px;
+}
+
+.names {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.popos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 280px;
+  width: 300px;
+  border: 1px solid black;
+}
+
+.possts {
+  display: flex;
+  justify-content: center;
+}
+
+.tipo {
+  display: flex;
+  justify-content: center;
+}
+/* 
+.fuw {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+} */
+
+.joo {
+  height: 180px;
+  padding: 20px 10px;
+}
