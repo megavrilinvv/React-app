@@ -5,7 +5,6 @@ import { Header } from "./Components/Header";
 import { UsersName } from "./Components/UsersName";
 import { UsersPosts } from "./Components/UsersPosts";
 import { PostComments } from "./Components/PostComments";
-import { Photo } from "./Components/Photo";
 
 function App() {
   const [users, setUsers] = useState([]);

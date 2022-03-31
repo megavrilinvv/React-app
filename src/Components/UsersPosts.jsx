@@ -7,22 +7,18 @@ import Divider from "@mui/material/Divider";
 
 export const UsersPosts = ({ posts, takeComments }) => (
   <Box sx={{ width: "100%" }}>
-    <Grid
-      className="fuw"
-      container
-      rowSpacing={1}
-      columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-    >
+    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
       {posts.map((post, index) => (
         <Grid key={post.id} item xs={3}>
           <Box
+            className="joo"
             sx={{
               width: "100%",
               maxWidth: 360,
               bgcolor: "background.paper",
             }}
           >
-            <Box sx={{ my: 3, mx: 2 }}>
+            <Box sx={{ my: 3, mx: 2, height: 250 }}>
               <div>
                 <Grid>
                   <Grid item xs>
@@ -37,7 +33,7 @@ export const UsersPosts = ({ posts, takeComments }) => (
               </div>
             </Box>
             <Divider variant="middle" />
-            <Box className="tipo" sx={{ mt: 3, ml: 1, mb: 1 }}>
+            <Box className="tipo" sx={{ mt: 0, ml: 1, mb: 0 }}>
               <Button onClick={() => takeComments(post.id)}>Comments</Button>
             </Box>
           </Box>
